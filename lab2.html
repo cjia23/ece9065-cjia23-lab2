@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>SE 3316 - Lab 2</title>
+<meta charset="UTF-8">
+<script type='text/javascript' src='script.js'>
+
+</script>
+</head>
+<body>
+<h1>Fruit Shelf</h1>
+<ol id=”fruits”></ol>
+Pick a fruit:
+<input type="text" id="newfruit">
+<h1>Basket</h1>
+<ol id=”basket”>
+
+    <li id = "apple">Apple <img src = "apple.jpg"> 
+        ---Available Quantity: 
+        <a id= "apple_quantity" >a</a>
+        <input type = "textbox" id = "apple_to_buy" value = "1">
+        <button onclick = "buy_apple()" id = "apple_button">Buy some apples</button>
+    </li>
+    <li>Avocado<img src = "avocado.jpg" >
+        ---Available Quantity: 
+        <a id= "avocado_quantity" >a</a>
+        <input type = "textbox" id = "avocado_to_buy" value = "1">
+        <button onclick = "buy_avocado()" id = "avocado_button">Buy some avocado</button>
+    </li>
+    <li>Banana<img src= "banana.jpg" >
+        ---Available Quantity: 
+        <a id= "banana_quantity" >a</a>
+        <input type = "textbox" id = "banana_to_buy" value = "1">
+        <button onclick = "buy_banana()" id = "banana_button">Buy some banana</button>
+    </li>
+    <li>Blueberry<img src = "blueberries.jpg" >
+        ---Available Quantity: 
+        <a id= "blueberry_quantity" >a</a>
+        <input type = "textbox" id = "blueberry_to_buy" value = "1">
+        <button onclick = "buy_blueberry()" id = "blueberry_button">Buy some blueberry</button>
+    </li>
+    <li>Cherry<img src = "cherry.jpg" >
+        ---Available Quantity: 
+        <a id= "cherry_quantity" >a</a>
+        <input type = "textbox" id = "cherry_to_buy" value = "1">
+        <button onclick = "buy_cherry()" id = "cherry_button">Buy some cherry</button>
+    </li>
+    <li>Coconut<img src = "coconut.jpg" >
+        ---Available Quantity: 
+        <a id= "coconut_quantity" >a</a>
+        <input type = "textbox" id = "coconut_to_buy" value = "1">
+        <button onclick = "buy_coconut()" id = "coconut_button">Buy some coconut</button>
+
+    </li>
+    <li>Grape<img src = "grape.jpg" >
+        ---Available Quantity: 
+        <a id= "grape_quantity" >a</a>
+        <input type = "textbox" id = "grape_to_buy" value = "1">
+        <button onclick = "buy_grape()" id = "grape_button">Buy some grape</button>
+</li>
+    <li>Peach<img src = "peach.jpg" >
+        ---Available Quantity: 
+        <a id= "peach_quantity" >a</a>
+        <input type = "textbox" id = "peach_to_buy" value = "1">
+        <button onclick = "buy_peach()" id = "peach_button">Buy some peach</button>
+    </li>
+    <li>Pear<img src = "pear.jpg" >
+        ---Available Quantity: 
+        <a id= "pear_quantity" >a</a>
+        <input type = "textbox" id = "pear_to_buy" value = "1">
+        <button onclick = "buy_pear()" id = "pear_button">Buy some pear</button>
+    </li>
+    <li>Pineapple<img src = "pineapple.jpg" >
+        ---Available Quantity: 
+        <a id= "pineapple_quantity" >a</a>
+        <input type = "textbox" id = "pineapple_to_buy" value = "1">
+        <button onclick = "buy_pineapple()" id = "pineapple_button">Buy some pineapple</button>
+    </li>
+</ol>
+</br>
+</br>
+<a>Here is the list you have bought:
+    <table border = 5>
+        <tbody id = "shopping cart">
+            <tr>
+                <th>Item Name</th>
+                <th>Quantity Bought</th>
+                <th>Price of Each Item</th>
+                <th>Subtotal</th>
+                <th>Tax</th>
+                <th>Total Including Tax</th>
+                <th>Plus</th>
+                <th>Minus</th>
+                <th>Delete</th>
+            </tr>
+        </tbody>
+    </table>
+</a>
+</body>
+</html>
