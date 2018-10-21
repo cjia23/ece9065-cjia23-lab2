@@ -72,7 +72,6 @@ window.onload =function()
     document.getElementById("pineapple_quantity").innerHTML = pineapple_quantity
 }
 
-
 function buy_apple()
 {
     //first time click
@@ -1922,3 +1921,102 @@ function buy_pineapple()
         window.alert("Ah oh, there is no pineapple available. Please check with store manager.")
     }
 }
+
+function to_buy(){
+    
+    //show total price
+    var total_price =0
+    if(document.getElementById("apple_total") != null){
+    total_price = total_price+document.getElementById("apple_total").value
+    }
+    if(document.getElementById("avocado_total") != null){
+        total_price = total_price+document.getElementById("avocado_total").value
+    }
+    if(document.getElementById("banana_total") != null){
+        total_price = total_price+document.getElementById("banana_total").value
+    }
+    if(document.getElementById("blueberry_total") != null){
+        total_price = total_price+document.getElementById("blueberry_total").value
+    }
+    if(document.getElementById("cherry_total") != null){
+        total_price = total_price+document.getElementById("cherry_total").value
+    }
+    if(document.getElementById("coconut_total") != null){
+        total_price = total_price+document.getElementById("coconut_total").value
+    }
+    if(document.getElementById("grape_total") != null){
+        total_price = total_price+document.getElementById("grape_total").value
+    }
+    if(document.getElementById("peach_total") != null){
+        total_price = total_price+document.getElementById("peach_total").value
+    }
+    if(document.getElementById("pear_total") != null){
+        total_price = total_price+document.getElementById("pear_total").value
+    }
+    if(document.getElementById("pineapple_total") != null){
+        total_price = total_price+document.getElementById("pineapple_total").value
+    }
+
+    //show message
+    var check = confirm("Do you want to continue? the total price is: " + total_price + "$")
+    
+    if(check == true){
+       
+       //document.getElementById("apple quantity").value
+
+       
+       //clear the table content
+       var new_tbody = document.createElement('tbody')
+       var old_tbody = document.getElementById("shopping cart")
+       old_tbody.parentNode.replaceChild(new_tbody,old_tbody)
+    } else{
+        
+        //return the canceled quantity 
+        if(document.getElementById("apple_total") != null){
+            document.getElementById("apple_quantity").value = 5
+            document.getElementById("apple_quantity").innerHTML = 5
+            }
+            if(document.getElementById("avocado_total") != null){
+            document.getElementById("avocado_quantity").value = 5
+            document.getElementById("avocado_quantity").innerHTML = 5
+            }
+            if(document.getElementById("banana_total") != null){
+            document.getElementById("banana_quantity").value = 5
+            document.getElementById("banana_quantity").innerHTML = 5
+            }
+            if(document.getElementById("blueberry_total") != null){
+                document.getElementById("blueberry_quantity").value = 5
+                document.getElementById("blueberry_quantity").innerHTML = 5
+            }
+            if(document.getElementById("cherry_total") != null){
+                document.getElementById("cherry_quantity").value = 5
+                document.getElementById("cherry_quantity").innerHTML = 5
+            }
+            if(document.getElementById("coconut_total") != null){
+                document.getElementById("coconut_quantity").value = 5
+                document.getElementById("coconut_quantity").innerHTML = 5
+            }
+            if(document.getElementById("grape_total") != null){
+                document.getElementById("grape_quantity").value = 5
+                document.getElementById("grape_quantity").innerHTML = 5
+            }
+            if(document.getElementById("peach_total") != null){
+                document.getElementById("peach_quantity").value = 5
+                document.getElementById("peach_quantity").innerHTML = 5
+            }
+            if(document.getElementById("pear_total") != null){
+                document.getElementById("pear_quantity").value = 5
+                document.getElementById("pear_quantity").innerHTML = 5
+            }
+            if(document.getElementById("pineapple_total") != null){
+                document.getElementById("pineapple_quantity").value = 5
+                document.getElementById("pineapple_quantity").innerHTML = 5
+            }
+        //clear the table content
+        var new_tbody = document.createElement('tbody')
+        var old_tbody = document.getElementById("shopping cart")
+        old_tbody.parentNode.replaceChild(new_tbody,old_tbody)
+
+    }
+}
+

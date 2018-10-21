@@ -57,7 +57,7 @@ Pick a fruit:
         <a id= "grape_quantity" >a</a>
         <input type = "textbox" id = "grape_to_buy" value = "1">
         <button onclick = "buy_grape()" id = "grape_button">Buy some grape</button>
-</li>
+    </li>
     <li>Peach<img src = "peach.jpg" >
         ---Available Quantity: 
         <a id= "peach_quantity" >a</a>
@@ -79,10 +79,10 @@ Pick a fruit:
 </ol>
 </br>
 </br>
-<a>Here is the list you have bought:
-    <table border = 5>
-        <tbody id = "shopping cart">
-            <tr>
+<a>Here is the list you have bought: 
+    <button onclick = "to_buy()" id = "buy_button">BUY</button>
+    <table id = "mytable" border = 2>
+            <thead>
                 <th>Item Name</th>
                 <th>Quantity Bought</th>
                 <th>Price of Each Item</th>
@@ -92,8 +92,10 @@ Pick a fruit:
                 <th>Plus</th>
                 <th>Minus</th>
                 <th>Delete</th>
-            </tr>
-        </tbody>
+            </thead>
+            <tbody id = "shopping cart">
+            </tbody>
+        
     </table>
 </a>
 </body>
