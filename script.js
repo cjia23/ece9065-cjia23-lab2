@@ -61,21 +61,32 @@ var pineapple_tax_rate = 0.13
 window.onload =function()
 {
     document.getElementById("apple_quantity").innerHTML = apple_quantity
+    document.getElementById("apple_quantity").value =5
     document.getElementById("avocado_quantity").innerHTML = avocado_quantity
+    document.getElementById("avocado_quantity").value =5
     document.getElementById("banana_quantity").innerHTML = banana_quantity
+    document.getElementById("banana_quantity").value =5
     document.getElementById("blueberry_quantity").innerHTML = blueberry_quantity
+    document.getElementById("blueberry_quantity").value =5
     document.getElementById("cherry_quantity").innerHTML = cherry_quantity
+    document.getElementById("cherry_quantity").value =5
     document.getElementById("coconut_quantity").innerHTML = coconut_quantity
+    document.getElementById("coconut_quantity").value =5
     document.getElementById("grape_quantity").innerHTML = grape_quantity
+    document.getElementById("grape_quantity").value =5
     document.getElementById("peach_quantity").innerHTML = peach_quantity
+    document.getElementById("peach_quantity").value =5
     document.getElementById("pear_quantity").innerHTML = pear_quantity
+    document.getElementById("pear_quantity").value =5
     document.getElementById("pineapple_quantity").innerHTML = pineapple_quantity
+    document.getElementById("pineapple_quantity").value =5
 }
 
 function buy_apple()
 {
     //first time click
-    if (apple_quantity == 5 && document.getElementById("apple_to_buy").value <= apple_quantity)
+    
+    if (apple_quantity == document.getElementById("apple_quantity").value && document.getElementById("apple_to_buy").value <= apple_quantity)
     {
         //add a row for apple
         var E1 = document.createElement("tr")
@@ -143,7 +154,7 @@ function buy_apple()
         apple_btn_plus.onclick = (function apple_plus()
         {
         
-        if(apple_bought<5){
+        if(apple_bought<document.getElementById("apple_quantity").value){
         apple_quantity--
         document.getElementById("apple_quantity").innerHTML = apple_quantity
         
@@ -223,7 +234,7 @@ function buy_apple()
 
     }
     //second time click
-    else if (apple_quantity < 5 && apple_quantity > 0 && document.getElementById("apple_to_buy").value <= apple_quantity)
+    else if (apple_quantity < document.getElementById("apple_quantity").value && apple_quantity > 0 && document.getElementById("apple_to_buy").value <= apple_quantity)
     {
         //second click to modify value
         apple_to_buy = parseInt(document.getElementById("apple_to_buy").value,10)
@@ -253,6 +264,8 @@ function buy_apple()
     }
     else 
     {
+        //window.alert(document.getElementById("apple_quantity").value)
+        //window.alert(apple_quantity)
         window.alert("Ah oh, there is no apple available. Please check with store manager.")
     }
 }
@@ -260,7 +273,7 @@ function buy_apple()
 function buy_avocado()
 {
     //first time click
-    if (avocado_quantity == 5 && document.getElementById("avocado_to_buy").value <= avocado_quantity)
+    if (avocado_quantity == document.getElementById("avocado_quantity").value && document.getElementById("avocado_to_buy").value <= avocado_quantity)
     {
         //add a row for avocado
         var E1 = document.createElement("tr")
@@ -328,7 +341,7 @@ function buy_avocado()
         avocado_btn_plus.onclick = (function avocado_plus()
         {
         
-        if(avocado_bought<5){
+        if(avocado_bought<document.getElementById("avocado_quantity").value){
         avocado_quantity--
         document.getElementById("avocado_quantity").innerHTML = avocado_quantity
         
@@ -408,7 +421,7 @@ function buy_avocado()
 
     }
     //second time click
-    else if (avocado_quantity < 5 && avocado_quantity > 0 && document.getElementById("avocado_to_buy").value <= avocado_quantity)
+    else if (avocado_quantity < document.getElementById("avocado_quantity").value && avocado_quantity > 0 && document.getElementById("avocado_to_buy").value <= avocado_quantity)
     {
         //second click to modify value
         avocado_to_buy = parseInt(document.getElementById("avocado_to_buy").value,10)
@@ -445,7 +458,7 @@ function buy_avocado()
 function buy_banana()
 {
     //first time click
-    if (banana_quantity == 5 && document.getElementById("banana_to_buy").value <= banana_quantity)
+    if (banana_quantity == document.getElementById("banana_quantity").value && document.getElementById("banana_to_buy").value <= banana_quantity)
     {
         //add a row for banana
         var E1 = document.createElement("tr")
@@ -513,7 +526,7 @@ function buy_banana()
         banana_btn_plus.onclick = (function banana_plus()
         {
         
-        if(banana_bought<5){
+        if(banana_bought<document.getElementById("banana_quantity").value){
         banana_quantity--
         document.getElementById("banana_quantity").innerHTML = banana_quantity
         
@@ -593,7 +606,7 @@ function buy_banana()
 
     }
     //second time click
-    else if (banana_quantity < 5 && banana_quantity > 0 && document.getElementById("banana_to_buy").value <= banana_quantity)
+    else if (banana_quantity < document.getElementById("banana_quantity").value && banana_quantity > 0 && document.getElementById("banana_to_buy").value <= banana_quantity)
     {
         //second click to modify value
         banana_to_buy = parseInt(document.getElementById("banana_to_buy").value,10)
@@ -630,7 +643,7 @@ function buy_banana()
 function buy_blueberry()
 {
     //first time click
-    if (blueberry_quantity == 5 && document.getElementById("blueberry_to_buy").value <= blueberry_quantity)
+    if (blueberry_quantity == document.getElementById("blueberry_quantity").value && document.getElementById("blueberry_to_buy").value <= blueberry_quantity)
     {
         //add a row for blueberry
         var E1 = document.createElement("tr")
@@ -698,7 +711,7 @@ function buy_blueberry()
         blueberry_btn_plus.onclick = (function blueberry_plus()
         {
         
-        if(blueberry_bought<5){
+        if(blueberry_bought<document.getElementById("blueberry_quantity").value){
         blueberry_quantity--
         document.getElementById("blueberry_quantity").innerHTML = blueberry_quantity
         
@@ -778,7 +791,7 @@ function buy_blueberry()
 
     }
     //second time click
-    else if (blueberry_quantity < 5 && blueberry_quantity > 0 && document.getElementById("blueberry_to_buy").value <= blueberry_quantity)
+    else if (blueberry_quantity < document.getElementById("blueberry_quantity").value && blueberry_quantity > 0 && document.getElementById("blueberry_to_buy").value <= blueberry_quantity)
     {
         //second click to modify value
         blueberry_to_buy = parseInt(document.getElementById("blueberry_to_buy").value,10)
@@ -815,7 +828,7 @@ function buy_blueberry()
 function buy_cherry()
 {
     //first time click
-    if (cherry_quantity == 5 && document.getElementById("cherry_to_buy").value <= cherry_quantity)
+    if (cherry_quantity == document.getElementById("cherry_quantity").value && document.getElementById("cherry_to_buy").value <= cherry_quantity)
     {
         //add a row for cherry
         var E1 = document.createElement("tr")
@@ -883,7 +896,7 @@ function buy_cherry()
         cherry_btn_plus.onclick = (function cherry_plus()
         {
         
-        if(cherry_bought<5){
+        if(cherry_bought<document.getElementById("cherry_quantity").value){
         cherry_quantity--
         document.getElementById("cherry_quantity").innerHTML = cherry_quantity
         
@@ -963,7 +976,7 @@ function buy_cherry()
 
     }
     //second time click
-    else if (cherry_quantity < 5 && cherry_quantity > 0 && document.getElementById("cherry_to_buy").value <= cherry_quantity)
+    else if (cherry_quantity < document.getElementById("cherry_quantity").value && cherry_quantity > 0 && document.getElementById("cherry_to_buy").value <= cherry_quantity)
     {
         //second click to modify value
         cherry_to_buy = parseInt(document.getElementById("cherry_to_buy").value,10)
@@ -1000,7 +1013,7 @@ function buy_cherry()
 function buy_coconut()
 {
     //first time click
-    if (coconut_quantity == 5 && document.getElementById("coconut_to_buy").value <= coconut_quantity)
+    if (coconut_quantity == document.getElementById("coconut_quantity").value && document.getElementById("coconut_to_buy").value <= coconut_quantity)
     {
         //add a row for coconut
         var E1 = document.createElement("tr")
@@ -1068,7 +1081,7 @@ function buy_coconut()
         coconut_btn_plus.onclick = (function coconut_plus()
         {
         
-        if(coconut_bought<5){
+        if(coconut_bought<document.getElementById("coconut_quantity").value){
         coconut_quantity--
         document.getElementById("coconut_quantity").innerHTML = coconut_quantity
         
@@ -1148,7 +1161,7 @@ function buy_coconut()
 
     }
     //second time click
-    else if (coconut_quantity < 5 && coconut_quantity > 0 && document.getElementById("coconut_to_buy").value <= coconut_quantity)
+    else if (coconut_quantity < document.getElementById("coconut_quantity").value && coconut_quantity > 0 && document.getElementById("coconut_to_buy").value <= coconut_quantity)
     {
         //second click to modify value
         coconut_to_buy = parseInt(document.getElementById("coconut_to_buy").value,10)
@@ -1185,7 +1198,7 @@ function buy_coconut()
 function buy_grape()
 {
     //first time click
-    if (grape_quantity == 5 && document.getElementById("grape_to_buy").value <= grape_quantity)
+    if (grape_quantity == document.getElementById("grape_quantity").value && document.getElementById("grape_to_buy").value <= grape_quantity)
     {
         //add a row for grape
         var E1 = document.createElement("tr")
@@ -1253,7 +1266,7 @@ function buy_grape()
         grape_btn_plus.onclick = (function grape_plus()
         {
         
-        if(grape_bought<5){
+        if(grape_bought<document.getElementById("grape_quantity").value){
         grape_quantity--
         document.getElementById("grape_quantity").innerHTML = grape_quantity
         
@@ -1333,7 +1346,7 @@ function buy_grape()
 
     }
     //second time click
-    else if (grape_quantity < 5 && grape_quantity > 0 && document.getElementById("grape_to_buy").value <= grape_quantity)
+    else if (grape_quantity < document.getElementById("grape_quantity").value && grape_quantity > 0 && document.getElementById("grape_to_buy").value <= grape_quantity)
     {
         //second click to modify value
         grape_to_buy = parseInt(document.getElementById("grape_to_buy").value,10)
@@ -1370,7 +1383,7 @@ function buy_grape()
 function buy_peach()
 {
     //first time click
-    if (peach_quantity == 5 && document.getElementById("peach_to_buy").value <= peach_quantity)
+    if (peach_quantity == document.getElementById("peach_quantity").value && document.getElementById("peach_to_buy").value <= peach_quantity)
     {
         //add a row for peach
         var E1 = document.createElement("tr")
@@ -1438,7 +1451,7 @@ function buy_peach()
         peach_btn_plus.onclick = (function peach_plus()
         {
         
-        if(peach_bought<5){
+        if(peach_bought<document.getElementById("peach_quantity").value){
         peach_quantity--
         document.getElementById("peach_quantity").innerHTML = peach_quantity
         
@@ -1518,7 +1531,7 @@ function buy_peach()
 
     }
     //second time click
-    else if (peach_quantity < 5 && peach_quantity > 0 && document.getElementById("peach_to_buy").value <= peach_quantity)
+    else if (peach_quantity < document.getElementById("peach_quantity").value && peach_quantity > 0 && document.getElementById("peach_to_buy").value <= peach_quantity)
     {
         //second click to modify value
         peach_to_buy = parseInt(document.getElementById("peach_to_buy").value,10)
@@ -1555,7 +1568,7 @@ function buy_peach()
 function buy_pear()
 {
     //first time click
-    if (pear_quantity == 5 && document.getElementById("pear_to_buy").value <= pear_quantity)
+    if (pear_quantity == document.getElementById("pear_quantity").value && document.getElementById("pear_to_buy").value <= pear_quantity)
     {
         //add a row for pear
         var E1 = document.createElement("tr")
@@ -1623,7 +1636,7 @@ function buy_pear()
         pear_btn_plus.onclick = (function pear_plus()
         {
         
-        if(pear_bought<5){
+        if(pear_bought<document.getElementById("pear_quantity").value){
         pear_quantity--
         document.getElementById("pear_quantity").innerHTML = pear_quantity
         
@@ -1703,7 +1716,7 @@ function buy_pear()
 
     }
     //second time click
-    else if (pear_quantity < 5 && pear_quantity > 0 && document.getElementById("pear_to_buy").value <= pear_quantity)
+    else if (pear_quantity < document.getElementById("pear_quantity").value && pear_quantity > 0 && document.getElementById("pear_to_buy").value <= pear_quantity)
     {
         //second click to modify value
         pear_to_buy = parseInt(document.getElementById("pear_to_buy").value,10)
@@ -1740,7 +1753,7 @@ function buy_pear()
 function buy_pineapple()
 {
     //first time click
-    if (pineapple_quantity == 5 && document.getElementById("pineapple_to_buy").value <= pineapple_quantity)
+    if (pineapple_quantity == document.getElementById("pineapple_quantity").value && document.getElementById("pineapple_to_buy").value <= pineapple_quantity)
     {
         //add a row for pineapple
         var E1 = document.createElement("tr")
@@ -1808,7 +1821,7 @@ function buy_pineapple()
         pineapple_btn_plus.onclick = (function pineapple_plus()
         {
         
-        if(pineapple_bought<5){
+        if(pineapple_bought<document.getElementById("pineapple_quantity").value){
         pineapple_quantity--
         document.getElementById("pineapple_quantity").innerHTML = pineapple_quantity
         
@@ -1888,7 +1901,7 @@ function buy_pineapple()
 
     }
     //second time click
-    else if (pineapple_quantity < 5 && pineapple_quantity > 0 && document.getElementById("pineapple_to_buy").value <= pineapple_quantity)
+    else if (pineapple_quantity < document.getElementById("pineapple_quantity").value && pineapple_quantity > 0 && document.getElementById("pineapple_to_buy").value <= pineapple_quantity)
     {
         //second click to modify value
         pineapple_to_buy = parseInt(document.getElementById("pineapple_to_buy").value,10)
@@ -2020,3 +2033,253 @@ function to_buy(){
     }
 }
 
+function password_check(){
+    if (document.getElementById("password box").value == "chunyang_jia"){
+        var z1 = document.getElementById("available quantity")
+        
+        //box to modify apple quantity
+        var y1 = document.createElement('li')
+        var y2 = document.createTextNode("Item: Apple; Tax rate is: ")
+        var y3 = document.createTextNode(apple_tax_rate)
+        var y4 = document.createTextNode("  Apple quantity")
+        var y5 = document.createElement('input')
+        y5.id ="apple_change_quantity"
+        y5.type = 'textbox'
+        var y6 = document.createElement('input')
+        y6.id = "apple change button"
+        y6.type = 'button'
+        y6.value = 'apple new quantity'
+        y6.onclick = (function update_apple_quantity(){
+            apple_quantity = document.getElementById("apple_change_quantity").value
+            document.getElementById("apple_quantity").value = apple_quantity
+            document.getElementById("apple_quantity").innerHTML = apple_quantity
+        })
+        y1.appendChild(y2)
+        y1.appendChild(y3)
+        y1.appendChild(y4)
+        y1.appendChild(y5)
+        y1.appendChild(y6)
+        z1.appendChild(y1)
+        
+        //box to modify avocado quantity
+        var y1 = document.createElement('li')
+        var y2 = document.createTextNode("Item: Avocado; Tax rate is: ")
+        var y3 = document.createTextNode(avocado_tax_rate)
+        var y4 = document.createTextNode("  Avocado quantity")
+        var y5 = document.createElement('input')
+        y5.id ="avocado_change_quantity"
+        y5.type = 'textbox'
+        var y6 = document.createElement('input')
+        y6.id = "avocado change button"
+        y6.type = 'button'
+        y6.value = 'avocado new quantity'
+        y6.onclick = (function update_avocado_quantity(){
+            avocado_quantity = document.getElementById("avocado_change_quantity").value
+            document.getElementById("avocado_quantity").value = avocado_quantity
+            document.getElementById("avocado_quantity").innerHTML = avocado_quantity
+        })
+        y1.appendChild(y2)
+        y1.appendChild(y3)
+        y1.appendChild(y4)
+        y1.appendChild(y5)
+        y1.appendChild(y6)
+        z1.appendChild(y1)
+
+        //box to modify banana quantity
+        var y1 = document.createElement('li')
+        var y2 = document.createTextNode("Item: Banana; Tax rate is: ")
+        var y3 = document.createTextNode(banana_tax_rate)
+        var y4 = document.createTextNode("  Banana quantity")
+        var y5 = document.createElement('input')
+        y5.id ="banana_change_quantity"
+        y5.type = 'textbox'
+        var y6 = document.createElement('input')
+        y6.id = "banana change button"
+        y6.type = 'button'
+        y6.value = 'banana new quantity'
+        y6.onclick = (function update_banana_quantity(){
+            banana_quantity = document.getElementById("banana_change_quantity").value
+            document.getElementById("banana_quantity").value = banana_quantity
+            document.getElementById("banana_quantity").innerHTML = banana_quantity
+        })
+        y1.appendChild(y2)
+        y1.appendChild(y3)
+        y1.appendChild(y4)
+        y1.appendChild(y5)
+        y1.appendChild(y6)
+        z1.appendChild(y1)
+
+        //box to modify blueberry quantity
+        var y1 = document.createElement('li')
+        var y2 = document.createTextNode("Item: Blueberry; Tax rate is: ")
+        var y3 = document.createTextNode(blueberry_tax_rate)
+        var y4 = document.createTextNode("  Blueberry quantity")
+        var y5 = document.createElement('input')
+        y5.id ="blueberry_change_quantity"
+        y5.type = 'textbox'
+        var y6 = document.createElement('input')
+        y6.id = "blueberry change button"
+        y6.type = 'button'
+        y6.value = 'blueberry new quantity'
+        y6.onclick = (function update_blueberry_quantity(){
+            blueberry_quantity = document.getElementById("blueberry_change_quantity").value
+            document.getElementById("blueberry_quantity").value = blueberry_quantity
+            document.getElementById("blueberry_quantity").innerHTML = blueberry_quantity
+        })
+        y1.appendChild(y2)
+        y1.appendChild(y3)
+        y1.appendChild(y4)
+        y1.appendChild(y5)
+        y1.appendChild(y6)
+        z1.appendChild(y1)
+
+        //box to modify cherry quantity
+        var y1 = document.createElement('li')
+        var y2 = document.createTextNode("Item: Cherry; Tax rate is: ")
+        var y3 = document.createTextNode(cherry_tax_rate)
+        var y4 = document.createTextNode("  Cherry quantity")
+        var y5 = document.createElement('input')
+        y5.id ="cherry_change_quantity"
+        y5.type = 'textbox'
+        var y6 = document.createElement('input')
+        y6.id = "cherry change button"
+        y6.type = 'button'
+        y6.value = 'cherry new quantity'
+        y6.onclick = (function update_cherry_quantity(){
+            cherry_quantity = document.getElementById("cherry_change_quantity").value
+            document.getElementById("cherry_quantity").value = cherry_quantity
+            document.getElementById("cherry_quantity").innerHTML = cherry_quantity
+        })
+        y1.appendChild(y2)
+        y1.appendChild(y3)
+        y1.appendChild(y4)
+        y1.appendChild(y5)
+        y1.appendChild(y6)
+        z1.appendChild(y1)
+
+        //box to modify coconut quantity
+        var y1 = document.createElement('li')
+        var y2 = document.createTextNode("Item: Coconut; Tax rate is: ")
+        var y3 = document.createTextNode(coconut_tax_rate)
+        var y4 = document.createTextNode("  Coconut quantity")
+        var y5 = document.createElement('input')
+        y5.id ="coconut_change_quantity"
+        y5.type = 'textbox'
+        var y6 = document.createElement('input')
+        y6.id = "coconut change button"
+        y6.type = 'button'
+        y6.value = 'coconut new quantity'
+        y6.onclick = (function update_coconut_quantity(){
+            coconut_quantity = document.getElementById("coconut_change_quantity").value
+            document.getElementById("coconut_quantity").value = coconut_quantity
+            document.getElementById("coconut_quantity").innerHTML = coconut_quantity
+        })
+        y1.appendChild(y2)
+        y1.appendChild(y3)
+        y1.appendChild(y4)
+        y1.appendChild(y5)
+        y1.appendChild(y6)
+        z1.appendChild(y1)
+        
+
+    //box to modify grape quantity
+    var y1 = document.createElement('li')
+    var y2 = document.createTextNode("Item: Grape; Tax rate is: ")
+    var y3 = document.createTextNode(grape_tax_rate)
+    var y4 = document.createTextNode("  Grape quantity")
+    var y5 = document.createElement('input')
+    y5.id ="grape_change_quantity"
+    y5.type = 'textbox'
+    var y6 = document.createElement('input')
+    y6.id = "grape change button"
+    y6.type = 'button'
+    y6.value = 'grape new quantity'
+    y6.onclick = (function update_grape_quantity(){
+        grape_quantity = document.getElementById("grape_change_quantity").value
+        document.getElementById("grape_quantity").value = grape_quantity
+        document.getElementById("grape_quantity").innerHTML = grape_quantity
+    })
+    y1.appendChild(y2)
+    y1.appendChild(y3)
+    y1.appendChild(y4)
+    y1.appendChild(y5)
+    y1.appendChild(y6)
+    z1.appendChild(y1)
+    
+    //box to modify peach quantity
+    var y1 = document.createElement('li')
+    var y2 = document.createTextNode("Item: Peach; Tax rate is: ")
+    var y3 = document.createTextNode(peach_tax_rate)
+    var y4 = document.createTextNode("  Peach quantity")
+    var y5 = document.createElement('input')
+    y5.id ="peach_change_quantity"
+    y5.type = 'textbox'
+    var y6 = document.createElement('input')
+    y6.id = "peach change button"
+    y6.type = 'button'
+    y6.value = 'peach new quantity'
+    y6.onclick = (function update_peach_quantity(){
+        peach_quantity = document.getElementById("peach_change_quantity").value
+        document.getElementById("peach_quantity").value = peach_quantity
+        document.getElementById("peach_quantity").innerHTML = peach_quantity
+    })
+    y1.appendChild(y2)
+    y1.appendChild(y3)
+    y1.appendChild(y4)
+    y1.appendChild(y5)
+    y1.appendChild(y6)
+    z1.appendChild(y1)
+
+    //box to modify pear quantity
+    var y1 = document.createElement('li')
+    var y2 = document.createTextNode("Item: Pear; Tax rate is: ")
+    var y3 = document.createTextNode(pear_tax_rate)
+    var y4 = document.createTextNode("  Pear quantity")
+    var y5 = document.createElement('input')
+    y5.id ="pear_change_quantity"
+    y5.type = 'textbox'
+    var y6 = document.createElement('input')
+    y6.id = "pear change button"
+    y6.type = 'button'
+    y6.value = 'pear new quantity'
+    y6.onclick = (function update_pear_quantity(){
+        pear_quantity = document.getElementById("pear_change_quantity").value
+        document.getElementById("pear_quantity").value = pear_quantity
+        document.getElementById("pear_quantity").innerHTML = pear_quantity
+    })
+    y1.appendChild(y2)
+    y1.appendChild(y3)
+    y1.appendChild(y4)
+    y1.appendChild(y5)
+    y1.appendChild(y6)
+    z1.appendChild(y1)
+
+    //box to modify pineapple quantity
+    var y1 = document.createElement('li')
+    var y2 = document.createTextNode("Item: Pineapple; Tax rate is: ")
+    var y3 = document.createTextNode(pineapple_tax_rate)
+    var y4 = document.createTextNode("  Pineapple quantity")
+    var y5 = document.createElement('input')
+    y5.id ="pineapple_change_quantity"
+    y5.type = 'textbox'
+    var y6 = document.createElement('input')
+    y6.id = "pineapple change button"
+    y6.type = 'button'
+    y6.value = 'pineapple new quantity'
+    y6.onclick = (function update_pineapple_quantity(){
+        pineapple_quantity = document.getElementById("pineapple_change_quantity").value
+        document.getElementById("pineapple_quantity").value = pineapple_quantity
+        document.getElementById("pineapple_quantity").innerHTML = pineapple_quantity
+    })
+    y1.appendChild(y2)
+    y1.appendChild(y3)
+    y1.appendChild(y4)
+    y1.appendChild(y5)
+    y1.appendChild(y6)
+    z1.appendChild(y1)
+
+
+    } else {
+        window.alert("Ah oh, wrong password")
+    }
+}
